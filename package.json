@@ -1,24 +1,37 @@
 {
-  "name": "Photoramp",
-  "version": "1.0.0",
-  "description": "An Angular JS application that harnesses the intagram restful API",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://www.github.com/aqeelb/Photoramp.git"
-  },
-  "keywords": [
-    "Photoramp",
-    "Instagram",
-    "REST",
-    "AngularJS",
-    "Bootstrap",
-    "SASS",
-    "COMPASS"
-  ],
-  "author": "Aqeel Bhat",
-  "license": "MIT"
+    "name": "Photoramp",
+    "version": "1.0.0",
+    "description": "An Angular JS application that harnesses the intagram restful API",
+    "main": "Gruntfile.js",
+    "dependencies": {
+        "angular": "^1.3.2",
+        "font-awesome": "^4.2.0"
+    },
+    "devDependencies": {
+        "connect-livereload": "^0.5.0",
+        "grunt": "^0.4.5",
+        "grunt-cli": "^0.1.13",
+        "grunt-contrib-connect": "^0.9.0",
+        "grunt-contrib-watch": "^0.6.1",
+        "grunt-express": "^1.4.1",
+        "grunt-open": "^0.2.3"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/aqeelb/Photoramp.git"
+    },
+    "keywords": [
+        "Photoramp",
+        "Instagram",
+        "REST",
+        "AngularJS",
+        "Bootstrap",
+        "SASS",
+        "COMPASS"
+    ],
+    "author": "Aqeel Bhat",
+    "license": "MIT"
 }
