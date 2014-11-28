@@ -1,0 +1,46 @@
+/*
+    Author: Aqeel Bhat
+    DOC: 29th of November 2014
+    GitHub: http:/www.github.com/aqeelb
+    Handcrafted in Adobe Brackets []
+*/
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: sans-serif;
+}
+.border {
+    border: 1px solid rgba(160, 156, 156, 0.5);
+    border-radius: 2px;
+    box-shadow: 0 0 1px 1px rgba(160, 156, 156, 0.5);
+}
+
+/*Loader*/
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 55;
+}
+.loader {
+    background: url('../assets/loading.gif') no-repeat scroll 50% 50% transparent;
+    position: absolute;
+    top: 30%;
+    z-index: 60;
+    width: 20%;
+    max-width: 960px;
+    min-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}

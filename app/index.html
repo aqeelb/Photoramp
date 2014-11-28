@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="Photoramp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Photoramp &trade;</title>
+</head>
+
+<body ng-controller="MasterController">
+     <!--nav module will get injected here-->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="navbar"></nav>
+    <section class="overlay"></section>
+    <section class="photoramp"></section>
+    <!-- App Entry-->
+    <script src="config/app.js"></script>
+    <!-- App Configuration-->
+    <script src="config/config.js"></script>
+    <!--MasterController-->
+    <script src="controllers/MasterController.js"></script>
+</body>
+
+</html>
