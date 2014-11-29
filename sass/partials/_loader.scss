@@ -1,0 +1,25 @@
+$overlay-background: rgba(0, 0, 0, 0.8);
+$loader-background-url: url('../assets/loading.gif');
+ .overlay {
+    background: $overlay-background;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 55;
+    .loader {
+        background: $loader-background-url no-repeat scroll 50% 50% transparent;
+        position: absolute;
+        top: 30%;
+        z-index: 60;
+        width: 20%;
+        max-width: 960px;
+        min-width: 300px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+}

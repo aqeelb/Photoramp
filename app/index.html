@@ -3,37 +3,36 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <link rel="apple-touch-icon" sizes="57x57" href="shortcuts/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="shortcuts/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="shortcuts/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="shortcuts/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="shortcuts/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="shortcuts/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="shortcuts/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="shortcuts/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="shortcuts/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="shortcuts/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="shortcuts/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="shortcuts/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="shortcuts/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="shortcuts/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#9f00a7">
-    <meta name="msapplication-TileImage" content="shortcuts/mstile-144x144.png">
     <title>Photoramp &trade;</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="shortcuts/favicon.ico">
 </head>
 
 <body ng-controller="MasterController">
-    <!--nav module will get injected here-->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="navbar"></nav>
-    <section class="overlay"></section>
-    <section class="photoramp"></section>
-    <!-- App Entry-->
-    <script src="config/app.js"></script>
-    <!-- App Configuration-->
-    <script src="config/config.js"></script>
-    <!--MasterController-->
-    <script src="controllers/MasterController.js"></script>
+    <!--App Wrapper-->
+    <section class="container-fluid app-container">
+        <div class="row">
+            <div class="overlay" ng-show="layout.loader">
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-default" role="navigation" ng-include src="navbar"></nav>
+        </div>
+        <div class="row">
+            <section class="view-wrapper" ng-view></section>
+        </div>
+    </section>
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="scripts/config/app.js"></script>
+    <script src="scripts/config/config.js"></script>
+    <!--Controllers-->
+    <script src="scripts/controllers/MasterController.js"></script>
+    <script src="scripts/controllers/LoginController.js"></script>
 </body>
 
 </html>
