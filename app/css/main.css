@@ -6,8 +6,6 @@
     Handcrafted in Adobe Brackets []
 */
 body {
-  background: red;
-  border: 5px solid yellow;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -6811,6 +6809,10 @@ button.close {
     display: none !important;
   }
 }
+.app-container {
+  border: 1px solid red;
+}
+
 .overlay {
   background: purple;
   position: fixed;

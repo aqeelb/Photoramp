@@ -10,8 +10,6 @@ $background-color: red;
 $border-color: yellow;
 
 body {
-    background: $background-color;
-    border: 5px solid $border-color;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -24,7 +22,8 @@ body {
 //import bootstrap
 @import "bootstrap";
 
-//import partials
+//import sassy partials
+@import "partials/_shell";
 @import "partials/_loader";
 @import "partials/_navbar";
 @import "partials/_boxshadow";
