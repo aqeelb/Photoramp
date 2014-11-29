@@ -7,7 +7,11 @@ var Photoramp = angular.module("Photoramp", ["ngRoute"]);
 //On application run
 Photoramp.run(function ($rootScope) {
     "use strict";
-    //path to static header view partial
-    $rootScope.headerModule = 'app/partials/header.html';
+    
+    //Testing
+    $rootScope.navbar = 'app/templates/navbar.html';
+    $rootScope.photoramp = 'app/templates/photoramp.html';
+    $rootScope.login = 'app/templates/login.html';
+    
     console.info("Application has been created");
 });
