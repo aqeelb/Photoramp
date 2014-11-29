@@ -1,7 +1,32 @@
+/*
+    Author: Aqeel Bhat
+    DOC: 29th of November 2014
+    GitHub: http:/www.github.com/aqeelb
+    Handcrafted in Adobe Brackets []
+*/
+
 //global variables and rules
-$appFont: 'Armata', sans-serif;
+$background-color: red;
+$border-color: yellow;
+
+body {
+    background: $background-color;
+    border: 5px solid $border-color;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+}
 
 //import bootstrap
-@import "bootstrap";
+//@import "bootstrap";
+
+//import partials
+@import "partials/_loader";
 @import "partials/_navbar";
+@import "partials/_boxshadow";
 @import "partials/_photoramp";
+
