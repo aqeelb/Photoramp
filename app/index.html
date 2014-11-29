@@ -9,16 +9,31 @@
 </head>
 
 <body ng-controller="MasterController">
-    <!--nav module will get injected here-->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="navbar"></nav>
+    <!--App loader--->
     <section class="overlay">
         <div class="loader"></div>
     </section>
+    
+    <!--Nav module will get injected here-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="navbar"></nav>
+    
+    <!--Photogird will get injected here-->
     <section class="photoramp"></section>
+    
+    <!--References to AngularJS and Angular Route-->
+    <script src="../node_modules/angular/angular.min.js"></script>
+    <script src="../node_modules/angular-route/angular-route.min.js"></script>
+    
+    <!--Reference to Bootstrap but is dependent on jQuery-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
     <!-- App Entry-->
     <script src="scripts/config/app.js"></script>
+    
     <!-- App Configuration-->
     <script src="scripts/config/config.js"></script>
+    
     <!--MasterController-->
     <script src="scripts/controllers/MasterController.js"></script>
 </body>
