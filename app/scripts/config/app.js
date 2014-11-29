@@ -27,7 +27,7 @@ Photoramp.run(function ($rootScope, $location, $route, $timeout) {
         console.log('$routeChangeSuccess');
         $timeout(function () {
             $rootScope.layout.loader = false;
-        }, 1000);
+        }, 1500);
     });
 
     $rootScope.$on('$routeChangeError', function (error) {
