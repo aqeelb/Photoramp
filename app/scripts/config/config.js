@@ -5,7 +5,15 @@ Photoramp.config(function ($routeProvider) {
     'use strict';
     $routeProvider.when("/login", {
         templateUrl: "/app/templates/login.html",
-        controller: "LoginViewController"
+        controller: "LoginController"
+    });
+    $routeProvider.when("/photoramp", {
+        templateUrl: "/app/templates/photoramp.html",
+        controller: "PhotorampController"
+    });
+    $routeProvider.when("/logout", {
+        templateUrl: "/app/templates/logout.html",
+        controller: "LogoutController"
     });
     $routeProvider.otherwise({
         redirectTo: "/login"

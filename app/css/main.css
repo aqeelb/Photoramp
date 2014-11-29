@@ -5,17 +5,8 @@
     GitHub: http:/www.github.com/aqeelb
     Handcrafted in Adobe Brackets []
 */
-body {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-}
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6809,6 +6800,20 @@ button.close {
     display: none !important;
   }
 }
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.view-wrapper {
+  padding: 30px;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
