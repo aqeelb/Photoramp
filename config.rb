@@ -5,8 +5,8 @@ require 'bootstrap-sass'
 http_path = "/"
 css_dir = "app/css"
 sass_dir = "sass"
-images_dir = "assets/images"
-javascripts_dir = "app"
+images_dir = "assets"
+javascripts_dir = "app/scripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
