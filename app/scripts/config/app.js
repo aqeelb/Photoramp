@@ -2,7 +2,7 @@
 /*global angular*/
 
 //Define Application Namespace and ng-route as dependency
-var Photoramp = angular.module("Photoramp", ["ngRoute", "Photoramp.Services"]);
+var Photoramp = angular.module("Photoramp", ["ngRoute", "Photoramp.Services", "infinite-scroll"]);
 
 //On application run
 Photoramp.run(function ($rootScope, $location, $route, $timeout) {
