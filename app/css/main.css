@@ -5,17 +5,8 @@
     GitHub: http:/www.github.com/aqeelb
     Handcrafted in Adobe Brackets []
 */
-body {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-}
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6809,6 +6800,31 @@ button.close {
     display: none !important;
   }
 }
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.view-wrapper {
+  padding: 30px;
+  min-height: 360px;
+  text-align: center;
+}
+.view-wrapper form .login-icon {
+  text-align: center;
+}
+.view-wrapper form .login-icon i {
+  color: #337ab7;
+}
+.view-wrapper form .login-icon i:hover {
+  color: #204d74;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -6836,8 +6852,8 @@ button.close {
 .navbar-default {
   min-height: 68px;
   border-radius: 0;
-  background-color: #517FA4;
-  border-color: #517FA4;
+  background-color: #337ab7;
+  border-color: #337ab7;
   -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.76);
   -moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.76);
   box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.76);
@@ -6848,6 +6864,9 @@ button.close {
 .navbar-default .navbar-header .navbar-toggle {
   padding-top: 20px;
 }
+.navbar-default .navbar-header i:hover {
+  color: colHighlight;
+}
 .navbar-default .navbar-collapse {
   padding-top: 10px;
 }
@@ -6856,7 +6875,7 @@ button.close {
   padding: 0;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #000000;
+  color: #204d74;
 }
 .navbar-default .navbar-brand img {
   width: 68px;
@@ -6868,21 +6887,21 @@ button.close {
   color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #000000;
+  color: #204d74;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #000000;
-  background-color: #517FA4;
+  color: #204d74;
+  background-color: #337ab7;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #000000;
-  background-color: #517FA4;
+  color: #204d74;
+  background-color: #337ab7;
 }
 .navbar-default .navbar-toggle {
-  border-color: #517FA4;
+  border-color: #337ab7;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #517FA4;
+  background-color: #337ab7;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -6895,7 +6914,7 @@ button.close {
   color: #ffffff;
 }
 .navbar-default .navbar-link:hover {
-  color: #000000;
+  color: #204d74;
 }
 
 @media (max-width: 767px) {
@@ -6903,15 +6922,29 @@ button.close {
     color: #ffffff;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #000000;
+    color: #204d74;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #000000;
-    background-color: #517FA4;
+    color: #204d74;
+    background-color: #337ab7;
   }
 }
 .boxshadow {
   border: 1px solid rgba(160, 156, 156, 0.5);
   border-radius: 2px;
   box-shadow: 0 0 1px 1px rgba(160, 156, 156, 0.5);
+}
+
+.photoramp .profile-picture {
+  width: 80px;
+  border: 1px solid rgba(195, 193, 193, 0.37);
+  border-radius: 100px;
+}
+.photoramp .photogrid {
+  border-top: 1px solid rgba(160, 156, 156, 0.5);
+  padding-top: 10px;
+  margin: 0 10px 0 10px;
+  height: auto;
+  overflow-y: auto;
+  max-height: 300px;
 }

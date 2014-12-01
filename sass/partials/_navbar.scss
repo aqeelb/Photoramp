@@ -1,8 +1,8 @@
 $navbar-min-height: 68px;
-$bgDefault: #517FA4;
-$bgHighlight: #517FA4;
+$bgDefault: #337ab7;
+$bgHighlight: #337ab7;
 $colDefault: #ffffff;
-$colHighlight: #000000;
+$colHighlight: #204d74;
 $borderRadius: 0;
 $logoPadding: 0;
 $headerBoxShadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.76);
@@ -22,6 +22,9 @@ $logowidth:68px;
         min-height: $navbar-min-height;
         .navbar-toggle {
             padding-top: $navbarCollapsedButtonPadding;
+        }
+        i:hover {
+            color: colHighlight;
         }
     }
     .navbar-collapse {

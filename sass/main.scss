@@ -9,6 +9,12 @@
 $background-color: red;
 $border-color: yellow;
 
+//import bootstrap
+@import "bootstrap";
+
+//import awesome google font
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 body {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -19,8 +25,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-//import bootstrap
-@import "bootstrap";
 
 //import sassy partials
 @import "partials/_shell";
