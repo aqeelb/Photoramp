@@ -8,10 +8,10 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
     $rootScope.user;
     $rootScope.media;
 
-
+    //initialize OAuth.js with the client id
     InstagramService.initialize();
 
-    //using the OAuth authorization result get user data
+    //using the OAuth authorization result get user info object
     $rootScope.getSelfData = function () {
         InstagramService.getUser().then(function (response) {
             if (response.meta.code === 200) {
@@ -21,7 +21,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
         });
     };
 
-    //get self media
+    //using the OAuth authorization result user Media
     $rootScope.getSelfMedia = function () {
         InstagramService.getMedia().then(function (response) {
             if (response.meta.code === 200) {
