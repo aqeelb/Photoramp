@@ -39,7 +39,7 @@ angular.module("Photoramp.Services", []).factory("InstagramService", function ($
             authorizationResult = false;
         },
         //gets basic user info
-        getUser: function () {
+        getUserInfo: function () {
             //create a deferred object using Angular's $q service
             var deferred = $q.defer();
             var promise = authorizationResult.get("/v1/users/self").done(
@@ -49,7 +49,7 @@ angular.module("Photoramp.Services", []).factory("InstagramService", function ($
             return deferred.promise;
         },
         //gets media according to the count
-        getMedia: function () {
+        getImages: function () {
             //create a deferred object using Angular's $q service
             var deferred = $q.defer();
             var promise = authorizationResult.get("/v1/users/self/media/recent?count=" + $rootScope.count).done(
