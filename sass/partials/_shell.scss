@@ -1,17 +1,20 @@
 $icon-color:#337ab7;
-$icon-highlight: #204d74;
-.view-wrapper {
-    padding: 30px;
-    min-height: 360px;
-    text-align: center;
-    form {
-        .login-icon {            
-            text-align: center; 
-            i {
-                color: $icon-color;    
-            }
-            i:hover {
-                color: $icon-highlight;
+ $icon-highlight:#204d74;
+ .app-container {
+     padding-top: 80px;
+    .view-wrapper {
+        padding: 30px;
+        min-height: 360px;
+        text-align: center;
+        form {
+            .login-icon {
+                text-align: center;
+                i {
+                    color: $icon-color;
+                }
+                i:hover {
+                    color: $icon-highlight;
+                }
             }
         }
     }

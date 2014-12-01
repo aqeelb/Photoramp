@@ -14,14 +14,12 @@
 
 <body ng-controller="MasterController">
     <!--App Wrapper-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="navbar"></nav>
     <section class="container-fluid app-container">
         <div class="row">
             <div class="overlay" ng-show="layout.loader">
                 <div class="loader"></div>
             </div>
-        </div>
-        <div class="row">
-            <nav class="navbar navbar-default" role="navigation" ng-include src="navbar"></nav>
         </div>
         <div class="row">
             <section class="view-wrapper col-md-6 col-md-offset-3 boxshadow" ng-view></section>
