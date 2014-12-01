@@ -7,6 +7,9 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
     //authenticated user
     $rootScope.user;
     $rootScope.media;
+    $rootScope.pagination;
+    $rootScope.count = 1;
+    
 
     //initialize OAuth.js with the client id
     InstagramService.initialize();
@@ -21,8 +24,8 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
     };
 
     //using the OAuth authorization result user Media
-    $rootScope.getSelfMedia = function (count) {
-        InstagramService.getMedia(count).then(function (response) {
+    $rootScope.getSelfMedia = function () {
+        InstagramService.getMedia().then(function (response) {
             if (response.meta.code === 200) {
                 $rootScope.media = response.data;
                 console.log(response);
@@ -37,8 +40,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
             if (InstagramService.isReady()) {
                 //when ready get data from instagram and route to the view
                 $rootScope.getSelfData();
-                //testing hardcoded count of 6
-                $rootScope.getSelfMedia(6);
+                $rootScope.getSelfMedia();
                 $location.path('/photoramp');
             }
         });
@@ -52,14 +54,17 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
     
     //lazy load images
     $rootScope.lazyLoadImages = function () {
-        console.log('Lazy Load in progress');
+//        InstagramService.getNext().then(function (response) {
+//                 console.log(response);
+//                $rootScope.pagination = response.pagination;
+//        });
     }
 
     //if the user is a returning user route to photoramp
     if (InstagramService.isReady()) {
+        console.log(InstagramService.isReady())
         $rootScope.getSelfData();
-        //testing hardcoded count of 6
-        $rootScope.getSelfMedia(6);
+        $rootScope.getSelfMedia();
         $location.path('/photoramp');
     }
 });
