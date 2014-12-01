@@ -3,25 +3,28 @@
         <div class="col-md-3">
             <img src="{{user.profile_picture}}" class="profile-picture">
         </div>
-        <div class="col-md-3 text-center">
-            <h1>{{user.counts.media}}</h1>
+        <div class="col-md-3">
+            <p>{{user.counts.media}}</p>
             <span>Pictures</span>
         </div>
-        <div class="col-md-3 text-center">
-            <h1>{{user.counts.followed_by}}</h1>
+        <div class="col-md-3">
+            <p>{{user.counts.followed_by}}</p>
             <span>Followers</span>
         </div>
-        <div class="col-md-3 text-center">
-            <h1>{{user.counts.follows}}</h1>
+        <div class="col-md-3">
+            <p>{{user.counts.follows}}</p>
             <span>Following</span>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <h1>{{user.full_name}}</h1>
+        <div class="col-md-4 ">
+            <p>{{user.full_name}}</p>
         </div>
-        <div class="col-md-12">
-            <h3>{{user.bio}}</h3>
+        <div class="col-md-4">
+            <a href="{{user.website}}">Website</a>
+        </div>
+        <div class="col-md-4 ">
+            <p>{{user.bio}}</p>
         </div>
     </div> 
     <div class="row photogrid boxshadow">

@@ -2,6 +2,8 @@ $icon-color:#337ab7;
 $icon-highlight: #204d74;
 .view-wrapper {
     padding: 30px;
+    min-height: 360px;
+    text-align: center;
     form {
         .login-icon {            
             text-align: center; 

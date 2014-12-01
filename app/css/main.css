@@ -6812,6 +6812,8 @@ body {
 
 .view-wrapper {
   padding: 30px;
+  min-height: 360px;
+  text-align: center;
 }
 .view-wrapper form .login-icon {
   text-align: center;
@@ -6934,7 +6936,7 @@ body {
 }
 
 .photoramp .profile-picture {
-  width: 100%;
+  width: 80px;
   border: 1px solid rgba(195, 193, 193, 0.37);
   border-radius: 100px;
 }
