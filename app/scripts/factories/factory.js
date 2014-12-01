@@ -25,6 +25,7 @@ angular.module('Photoramp.Services', []).factory('InstagramService', function ($
                         deferred.resolve();
                     } else {
                         //do something if there's an error
+                        console.error(error);
                     }
                 });
                 return deferred.promise;

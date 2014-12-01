@@ -30,7 +30,7 @@ Photoramp.controller("MasterController", function ($scope, $q, InstagramService)
     }
 
     //if the user is a returning user, hide the sign in button and display the tweets
-    if (twitterService.isReady()) {
+    if (InstagramService.isReady()) {
         $scope.refreshTimeline();
     }
 });

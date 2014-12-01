@@ -6813,6 +6813,15 @@ body {
 .view-wrapper {
   padding: 30px;
 }
+.view-wrapper form .login-icon {
+  text-align: center;
+}
+.view-wrapper form .login-icon i {
+  color: #337ab7;
+}
+.view-wrapper form .login-icon i:hover {
+  color: #204d74;
+}
 
 .overlay {
   background: rgba(0, 0, 0, 0.8);
@@ -6841,8 +6850,8 @@ body {
 .navbar-default {
   min-height: 68px;
   border-radius: 0;
-  background-color: #517FA4;
-  border-color: #517FA4;
+  background-color: #337ab7;
+  border-color: #337ab7;
   -webkit-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.76);
   -moz-box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.76);
   box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.76);
@@ -6854,7 +6863,7 @@ body {
   padding-top: 20px;
 }
 .navbar-default .navbar-header i:hover {
-  color: #aed4f2;
+  color: colHighlight;
 }
 .navbar-default .navbar-collapse {
   padding-top: 10px;
@@ -6864,7 +6873,7 @@ body {
   padding: 0;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #aed4f2;
+  color: #204d74;
 }
 .navbar-default .navbar-brand img {
   width: 68px;
@@ -6876,21 +6885,21 @@ body {
   color: #ffffff;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #aed4f2;
+  color: #204d74;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #aed4f2;
-  background-color: #517FA4;
+  color: #204d74;
+  background-color: #337ab7;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #aed4f2;
-  background-color: #517FA4;
+  color: #204d74;
+  background-color: #337ab7;
 }
 .navbar-default .navbar-toggle {
-  border-color: #517FA4;
+  border-color: #337ab7;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #517FA4;
+  background-color: #337ab7;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -6903,7 +6912,7 @@ body {
   color: #ffffff;
 }
 .navbar-default .navbar-link:hover {
-  color: #aed4f2;
+  color: #204d74;
 }
 
 @media (max-width: 767px) {
@@ -6911,11 +6920,11 @@ body {
     color: #ffffff;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #aed4f2;
+    color: #204d74;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #aed4f2;
-    background-color: #517FA4;
+    color: #204d74;
+    background-color: #337ab7;
   }
 }
 .boxshadow {
