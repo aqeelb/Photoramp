@@ -6815,7 +6815,6 @@ body {
   padding-top: 80px;
 }
 .app-container .view-wrapper {
-  padding: 30px;
   min-height: 360px;
   text-align: center;
 }
@@ -6937,8 +6936,14 @@ body {
   box-shadow: 0 0 25px 0px rgba(160, 156, 156, 0.5);
 }
 
+.photoramp {
+  padding: 15px;
+}
 .photoramp .border-radius {
   border-radius: 1000px;
+}
+.photoramp .user-statistics {
+  margin: 0;
 }
 .photoramp .user-statistics .profile-picture {
   width: 80px;
@@ -6947,10 +6952,14 @@ body {
 }
 .photoramp .user-statistics p {
   font-size: 35px;
+  margin: 0;
 }
 .photoramp .user-statistics span {
   color: #ccc;
   font-size: 12px;
+}
+.photoramp .user-details {
+  margin: 10px 0;
 }
 .photoramp .user-details .username p {
   font-size: 30px;

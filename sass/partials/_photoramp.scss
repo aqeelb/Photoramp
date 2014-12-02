@@ -5,19 +5,23 @@ $font-size-30: 30px;
 $label-color: #ccc;
 $profile-picture-width: 80px;
 $label-font-size: 12px;
+$box-padding: 15px;
 
-.photoramp {   
+.photoramp {
+    padding: $box-padding;
     .border-radius {
         border-radius: $border-radius-max;
     }
-    .user-statistics {        
+    .user-statistics {
+        margin:0;
         .profile-picture {
             width: $profile-picture-width;
             border: 1px solid  $border-color;
             border-radius: $border-radius-max;
         }
         p{
-            font-size: $font-size-35;    
+            font-size: $font-size-35;  
+            margin:0;
         }
         span{
             color: $label-color;
@@ -25,9 +29,10 @@ $label-font-size: 12px;
         }
     }
     .user-details {
+        margin: 10px 0;
         .username {
             p{
-                font-size: $font-size-30;
+                font-size: $font-size-30;                
             }
         }
         .website {

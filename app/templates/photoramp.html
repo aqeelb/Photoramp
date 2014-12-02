@@ -1,17 +1,17 @@
 <div class="row photoramp" infinite-scroll="lazyLoadImages()" infinite-scroll-disabled="isBusy" >
     <div class="row page-header user-statistics">
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-12">
             <img src="{{user.profile_picture}}" class="profile-picture">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-4">
             <p>{{user.counts.media}}</p>
             <span>Pictures</span>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-4">
             <p>{{user.counts.followed_by}}</p>
             <span>Followers</span>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-4">
             <p>{{user.counts.follows}}</p>
             <span>Following</span>
         </div>
@@ -28,7 +28,7 @@
         </div>
     </div> 
     <div class="row">
-        <div class="col-lg-6 col-md-4 col-xs-6 col-sm-4 thumb" ng-repeat="image in images">
+        <div class="col-lg-4 col-md-4 col-xs-6 col-sm-4 thumb" ng-repeat="image in images">
             <a>
                 <img class="img-responsive thumbnail boxshadow border-radius" src="{{image.images.low_resolution.url}}" alt="">
             </a>

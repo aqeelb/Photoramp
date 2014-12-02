@@ -9,7 +9,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
     $rootScope.images = null;
     $rootScope.maxId = null;
     //$rootScope.nextUrl = null;
-    $rootScope.count = 3;
+    $rootScope.count = 6;
     $rootScope.isBusy = false;
     $rootScope.loading = true;
 
@@ -95,6 +95,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
     if (InstagramService.isReady()) {
         $rootScope.getSelfInfo();
         $rootScope.getSelfImages();
+        $rootScope.showLogOut = true;
         $location.path('/photoramp');
     }
 });
