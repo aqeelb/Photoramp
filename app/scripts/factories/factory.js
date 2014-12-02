@@ -1,5 +1,5 @@
-/* jslint devel: true */
-/* global Photoramp, OAuth, angular */
+/*jslint devel: true*/
+/*global Photoramp, OAuth, angular*/
 //Application Data Factory
 
 angular.module("Photoramp.Services", []).factory("InstagramService", function ($q, $rootScope) {
