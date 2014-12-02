@@ -5,7 +5,7 @@
 var Photoramp = angular.module("Photoramp", ["ngRoute", "Photoramp.Services", "infinite-scroll"]);
 
 //On application run
-Photoramp.run(function ($rootScope, $location, $route, $timeout) {
+Photoramp.run(function ($rootScope, $location, $timeout) {
     "use strict";
     console.info("Application has been created");
 
@@ -17,17 +17,13 @@ Photoramp.run(function ($rootScope, $location, $route, $timeout) {
     $rootScope.navbar = '/app/templates/navbar.html';
 
     $rootScope.$on("$routeChangeStart", function () {
-        console.log("$routeChangeStart");
-        $timeout(function () {
-            $rootScope.layout.loader = true;
-        });
+        $rootScope.layout.loader = true;
     });
 
     $rootScope.$on('$routeChangeSuccess', function () {
-        console.log('$routeChangeSuccess');
         $timeout(function () {
             $rootScope.layout.loader = false;
-        }, 1500);
+        }, 800);
     });
 
     $rootScope.$on('$routeChangeError', function (error) {

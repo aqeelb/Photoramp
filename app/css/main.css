@@ -6,7 +6,7 @@
     Handcrafted in Adobe Brackets []
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6808,6 +6808,7 @@ body {
   -ms-user-select: none;
   user-select: none;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Comfortaa', cursive;
 }
 
 .app-container {
@@ -6829,7 +6830,7 @@ body {
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(51, 122, 183, 0.63);
   position: fixed;
   top: 0;
   left: 0;
@@ -6933,13 +6934,32 @@ body {
   }
 }
 .boxshadow {
-  border: 1px solid rgba(160, 156, 156, 0.5);
-  border-radius: 2px;
-  box-shadow: 0 0 1px 1px rgba(160, 156, 156, 0.5);
+  box-shadow: 0 0 25px 0px rgba(160, 156, 156, 0.5);
 }
 
-.photoramp .profile-picture {
+.photoramp .border-radius {
+  border-radius: 1000px;
+}
+.photoramp .user-statistics .profile-picture {
   width: 80px;
   border: 1px solid rgba(195, 193, 193, 0.37);
-  border-radius: 100px;
+  border-radius: 1000px;
+}
+.photoramp .user-statistics p {
+  font-size: 35px;
+}
+.photoramp .user-statistics span {
+  color: #ccc;
+  font-size: 12px;
+}
+.photoramp .user-details .username p {
+  font-size: 30px;
+}
+.photoramp .user-details .website a {
+  font-size: 12px;
+}
+.photoramp .user-details .description p {
+  font-size: 12px;
+  text-align: left;
+  color: #ccc;
 }
