@@ -1,7 +1,7 @@
-/*jslint devel: true*/
-/*global Photoramp, OAuth, angular*/
-/*jslint unparam: true*/
+/* jslint devel: true */
+/* global Photoramp, OAuth, angular */
 //Application Data Factory
+
 angular.module("Photoramp.Services", []).factory("InstagramService", function ($q, $rootScope) {
     "use strict";
     var authorizationResult = false;

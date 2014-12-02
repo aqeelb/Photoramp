@@ -1,5 +1,6 @@
-/*jslint devel: true*/ 
-/*global angular, Photoramp*/
+/* jslint devel: true */
+/* global angular, Photoramp */
+
 //route configuration
 Photoramp.config(function ($routeProvider) {
     'use strict';

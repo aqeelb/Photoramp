@@ -1,5 +1,5 @@
-/*jslint devel: true*/
-/*global angular*/
+/* jslint devel: true */
+/* global angular */
 
 //Define Application Namespace and ng-route as dependency
 var Photoramp = angular.module("Photoramp", ["ngRoute", "Photoramp.Services", "infinite-scroll"]);

@@ -1,5 +1,6 @@
-/*jslint devel: true*/
-/*global Photoramp, OAuth*/
+/* jslint devel: true */
+/* global Photoramp, OAuth */
+
 Photoramp.controller("MasterController", function ($location, $rootScope, InstagramService) {
     'use strict';
     console.info("Master Controller Loaded");
@@ -8,7 +9,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
     $rootScope.images = null;
     $rootScope.maxId = null;
     //$rootScope.nextUrl = null;
-    $rootScope.count = 5;
+    $rootScope.count = 4;
     $rootScope.isBusy = false;
     $rootScope.loading = true;
 
