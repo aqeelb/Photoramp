@@ -1,6 +1,6 @@
 /*jslint devel: true*/
 /*global Photoramp, OAuth*/
-Photoramp.controller("MasterController", function ($location, $rootScope, $q, InstagramService) {
+Photoramp.controller("MasterController", function ($location, $rootScope, InstagramService) {
     'use strict';
     console.info("Master Controller Loaded");
     //authenticated user
@@ -14,6 +14,19 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
 
     //initialize OAuth.js with the client id
     InstagramService.initialize();
+
+    //when the user clicks the connect button, the popup authorization window opens
+    $rootScope.connect = function (event) {
+        event.preventDefault();
+        InstagramService.connectInstagram().then(function () {
+            if (InstagramService.isReady()) {
+                //when ready get data from instagram and route to the view
+                $rootScope.getSelfInfo();
+                $rootScope.getSelfImages();
+                $location.path('/photoramp');
+            }
+        });
+    };
 
     //using the OAuth authorization result get user info object
     $rootScope.getSelfInfo = function () {
@@ -34,24 +47,11 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
         });
     };
 
-    //when the user clicks the connect button, the popup authorization window opens
-    $rootScope.connect = function (event) {
-        event.preventDefault();
-        InstagramService.connectInstagram().then(function () {
-            if (InstagramService.isReady()) {
-                //when ready get data from instagram and route to the view
-                $rootScope.getSelfInfo();
-                $rootScope.getSelfImages();
-                $location.path('/photoramp');
-            }
-        });
-    }
-
     //Clear cache annd route to logout view
     $rootScope.logOut = function () {
         InstagramService.clearCache();
         $location.path('/logout');
-    }
+    };
 
     //lazy load images
     $rootScope.lazyLoadImages = function () {
@@ -61,17 +61,24 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
             $rootScope.loading = false;
             return;
         }
+
+        //check data if no data is available then return
+        if ($rootScope.maxId === undefined) {
+            return;
+        }
+
         $rootScope.isBusy = true;
         InstagramService.getNext().then(function (response) {
+            var i = 0;
             if (response.meta.code === 200) {
-                for (var i = 0; i < response.data.length; i++) {
+                for (i; i < response.data.length; i += 1) {
                     $rootScope.images[$rootScope.images.length] = response.data[i];
                 }
                 $rootScope.maxId = response.pagination.next_max_id;
                 $rootScope.isBusy = false;
             }
         });
-    }
+    };
 
     //if the user is a returning user route to photoramp
     if (InstagramService.isReady()) {
