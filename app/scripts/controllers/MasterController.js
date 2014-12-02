@@ -1,7 +1,7 @@
 /*jslint devel: true*/
-/*global Photoramp, OAuth*/
+/*global Photoramp, OAuth, $, document*/
 
-Photoramp.controller("MasterController", function ($location, $rootScope, InstagramService, $timeout) {
+Photoramp.controller("MasterController", function ($location, $rootScope, InstagramService) {
     'use strict';
     console.info("Master Controller Loaded");
     //authenticated user    
@@ -18,13 +18,14 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
 
     //when the user clicks the connect button, the popup authorization window opens
     $rootScope.connect = function (event) {
-        event.preventDefault();        
+        event.preventDefault(); 
         InstagramService.connectInstagram().then(function () {
             if (InstagramService.isReady()) {
-                //when ready get data from instagram and route to the view                
+                //when ready get data from instagram and route to the view 
                 $rootScope.getSelfInfo();
                 $rootScope.getSelfImages();
                 $rootScope.showLogOut = true;
+                $rootScope.layout.loader = true;
                 $location.path('/photoramp');
             }
         });
@@ -45,6 +46,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
             if (response.meta.code === 200) {
                 $rootScope.images = response.data;
                 $rootScope.maxId = response.pagination.next_max_id;
+                $rootScope.layout.loader = false;
             }
         });
     };
@@ -84,15 +86,14 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
                 }
                 $rootScope.maxId = response.pagination.next_max_id;
                 $rootScope.isBusy = false;
-                $timeout(function () {
-                    $rootScope.layout.loader = false;
-                }, 1200);
+                $rootScope.layout.loader = false;
             }
         });
     };
 
     //if the user is a returning user route to photoramp
     if (InstagramService.isReady()) {
+        $rootScope.layout.loader = true;
         $rootScope.getSelfInfo();
         $rootScope.getSelfImages();
         $rootScope.showLogOut = true;
