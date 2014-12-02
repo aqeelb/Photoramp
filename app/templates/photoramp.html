@@ -1,5 +1,5 @@
 <div class="row photoramp" infinite-scroll="lazyLoadImages()" infinite-scroll-disabled="isBusy" >
-    <div class="row page-header">
+    <div class="row page-header user-statistics">
         <div class="col-md-3">
             <img src="{{user.profile_picture}}" class="profile-picture">
         </div>
@@ -16,14 +16,14 @@
             <span>Following</span>
         </div>
     </div>
-    <div class="row page-header">
-        <div class="col-md-4 ">
+    <div class="row page-header user-details">
+        <div class="col-md-4 username">
             <p>{{user.full_name}}</p>
         </div>
-        <div class="col-md-4">
-            <a href="{{user.website}}">Website</a>
+        <div class="col-md-4 website">
+            <a href="{{user.website}}">{{user.website}}</a>
         </div>
-        <div class="col-md-4 ">
+        <div class="col-md-4 description">
             <p>{{user.bio}}</p>
         </div>
     </div> 

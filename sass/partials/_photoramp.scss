@@ -1,13 +1,46 @@
 $border-radius-max: 1000px;
 $border-color: rgba(195, 193, 193, 0.37);
+$font-size-35: 35px;
+$font-size-30: 30px;
+$label-color: #ccc;
+$profile-picture-width: 80px;
+$label-font-size: 12px;
 
-.photoramp {
-    .profile-picture {
-        width: 80px;
-        border: 1px solid  $border-color;
-        border-radius: $border-radius-max;
-    }
+.photoramp {   
     .border-radius {
         border-radius: $border-radius-max;
+    }
+    .user-statistics {        
+        .profile-picture {
+            width: $profile-picture-width;
+            border: 1px solid  $border-color;
+            border-radius: $border-radius-max;
+        }
+        p{
+            font-size: $font-size-35;    
+        }
+        span{
+            color: $label-color;
+            font-size: $label-font-size;
+        }
+    }
+    .user-details {
+        .username {
+            p{
+                font-size: $font-size-30;
+            }
+        }
+        .website {
+            a{
+                font-size: $label-font-size;
+            }
+        }
+        .description {
+            p{                
+                font-size: $label-font-size;
+                text-align: left;
+                color: $label-color;    
+            }
+        }
     }
 }
