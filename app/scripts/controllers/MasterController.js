@@ -4,7 +4,7 @@
 Photoramp.controller("MasterController", function ($location, $rootScope, InstagramService, $timeout) {
     'use strict';
     console.info("Master Controller Loaded");
-    //authenticated user
+    //authenticated user    
     $rootScope.user = {};
     $rootScope.images = null;
     $rootScope.maxId = null;
@@ -18,12 +18,13 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
 
     //when the user clicks the connect button, the popup authorization window opens
     $rootScope.connect = function (event) {
-        event.preventDefault();
+        event.preventDefault();        
         InstagramService.connectInstagram().then(function () {
             if (InstagramService.isReady()) {
                 //when ready get data from instagram and route to the view                
                 $rootScope.getSelfInfo();
                 $rootScope.getSelfImages();
+                $rootScope.showLogOut = true;
                 $location.path('/photoramp');
             }
         });
@@ -57,6 +58,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
         var s = document.createElement("script");
         s.src = "https://instagram.com/accounts/logout";
         $("head").append(s);
+        $rootScope.showLogOut = false;
         $location.path('/login');
     };
 

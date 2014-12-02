@@ -12,6 +12,7 @@ Photoramp.run(function ($rootScope, $location, $timeout) {
     $rootScope.config = {};
     $rootScope.config.app_url = $location.url();
     $rootScope.layout = {};
+    $rootScope.showLogOut = false;
 
     //Static Navbar
     $rootScope.navbar = '/app/templates/navbar.html';
