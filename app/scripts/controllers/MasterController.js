@@ -47,10 +47,16 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
             }
         });
     };
-
+ 
     //Clear cache annd route to logout view
     $rootScope.logOut = function () {
         InstagramService.clearCache();
+        //Seems instagram logout can be performed by loading below url
+        //Documentation is vague :(
+        //Little DOM Manipulation ain't that bad. :D
+        var s = document.createElement("script");
+        s.src = "https://instagram.com/accounts/logout";
+        $("head").append(s);
         $location.path('/logout');
     };
 
