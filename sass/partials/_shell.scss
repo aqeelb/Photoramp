@@ -18,3 +18,15 @@ $icon-color:#337ab7;
         }
     }
 }
+.flex{
+	display: -webkit-flex;
+	display: flex;
+}
+.flex-1{
+	-webkit-flex: 1 0 0;
+   	flex: 1 0 0;
+}
+.vertical-center{
+    -webkit-align-items: center;
+    align-items: center;
+}
