@@ -57,7 +57,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
         var s = document.createElement("script");
         s.src = "https://instagram.com/accounts/logout";
         $("head").append(s);
-        $location.path('/logout');
+        $location.path('/login');
     };
 
     //lazy load images
