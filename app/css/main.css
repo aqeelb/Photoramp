@@ -6810,18 +6810,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.view-wrapper {
+.app-container {
+  padding-top: 80px;
+}
+.app-container .view-wrapper {
   padding: 30px;
   min-height: 360px;
   text-align: center;
 }
-.view-wrapper form .login-icon {
+.app-container .view-wrapper form .login-icon {
   text-align: center;
 }
-.view-wrapper form .login-icon i {
+.app-container .view-wrapper form .login-icon i {
   color: #337ab7;
 }
-.view-wrapper form .login-icon i:hover {
+.app-container .view-wrapper form .login-icon i:hover {
   color: #204d74;
 }
 
@@ -6939,12 +6942,4 @@ body {
   width: 80px;
   border: 1px solid rgba(195, 193, 193, 0.37);
   border-radius: 100px;
-}
-.photoramp .photogrid {
-  border-top: 1px solid rgba(160, 156, 156, 0.5);
-  padding-top: 10px;
-  margin: 0 10px 0 10px;
-  height: auto;
-  overflow-y: auto;
-  max-height: 300px;
 }
