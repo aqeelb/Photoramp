@@ -3,15 +3,14 @@
 Photoramp.controller("MasterController", function ($location, $rootScope, $q, InstagramService) {
     'use strict';
     console.info("Master Controller Loaded");
-
     //authenticated user
     $rootScope.user = {};
-    $rootScope.images;
+    $rootScope.images = null;
     $rootScope.maxId = null;
+    //$rootScope.nextUrl = null;
     $rootScope.count = 5;
     $rootScope.isBusy = false;
     $rootScope.loading = true;
-
 
     //initialize OAuth.js with the client id
     InstagramService.initialize();
@@ -30,7 +29,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
         InstagramService.getImages().then(function (response) {
             if (response.meta.code === 200) {
                 $rootScope.images = response.data;
-                console.log($rootScope.images);
+                $rootScope.maxId = response.pagination.next_max_id;
             }
         });
     };
@@ -63,11 +62,12 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
             return;
         }
         $rootScope.isBusy = true;
-        InstagramService.getImages().then(function (response) {
+        InstagramService.getNext().then(function (response) {
             if (response.meta.code === 200) {
                 for (var i = 0; i < response.data.length; i++) {
                     $rootScope.images[$rootScope.images.length] = response.data[i];
                 }
+                $rootScope.maxId = response.pagination.next_max_id;
                 $rootScope.isBusy = false;
             }
         });
@@ -75,7 +75,6 @@ Photoramp.controller("MasterController", function ($location, $rootScope, $q, In
 
     //if the user is a returning user route to photoramp
     if (InstagramService.isReady()) {
-        console.log(InstagramService.isReady())
         $rootScope.getSelfInfo();
         $rootScope.getSelfImages();
         $location.path('/photoramp');

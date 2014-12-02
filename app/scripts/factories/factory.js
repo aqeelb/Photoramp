@@ -60,12 +60,12 @@ angular.module("Photoramp.Services", []).factory("InstagramService", function ($
         },
         //fetches next set of images
         getNext: function () {
-//            var deferred = $q.defer();
-//            var promise = authorizationResult.get("/v1/users/self/media/recent?max_id="+$rootScope.pagination.next_max_id+"&count="+$rootScope.count).done(
-//                function (data) {
-//                    deferred.resolve(data);
-//                });
-//            return deferred.promise;         
+            var deferred = $q.defer();
+            var promise = authorizationResult.get("/v1/users/self/media/recent?count="+$rootScope.count+"&max_id="+$rootScope.maxId).done(
+                function (data) {
+                    deferred.resolve(data);
+                });
+            return deferred.promise;
         }
     };
 });
