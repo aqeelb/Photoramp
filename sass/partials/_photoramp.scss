@@ -1,7 +1,13 @@
+$border-radius-max: 1000px;
+$border-color: rgba(195, 193, 193, 0.37);
+
 .photoramp {
     .profile-picture {
         width: 80px;
-        border: 1px solid rgba(195, 193, 193, 0.37);
-        border-radius: 100px;
+        border: 1px solid  $border-color;
+        border-radius: $border-radius-max;
+    }
+    .border-radius {
+        border-radius: $border-radius-max;
     }
 }

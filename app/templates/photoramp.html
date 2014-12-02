@@ -1,5 +1,5 @@
 <div class="row photoramp" infinite-scroll="lazyLoadImages()" infinite-scroll-disabled="isBusy" >
-    <div class="row">
+    <div class="row page-header">
         <div class="col-md-3">
             <img src="{{user.profile_picture}}" class="profile-picture">
         </div>
@@ -16,7 +16,7 @@
             <span>Following</span>
         </div>
     </div>
-    <div class="row">
+    <div class="row page-header">
         <div class="col-md-4 ">
             <p>{{user.full_name}}</p>
         </div>
@@ -29,8 +29,8 @@
     </div> 
     <div class="row">
         <div class="col-lg-4 col-md-6 col-xs-4 col-sm-4 thumb" ng-repeat="image in images">
-            <a class="thumbnail" href="#">
-                <img class="img-responsive" src="{{image.images.low_resolution.url}}" alt="">
+            <a>
+                <img class="img-responsive thumbnail boxshadow border-radius" src="{{image.images.low_resolution.url}}" alt="">
             </a>
         </div>
     </div>
