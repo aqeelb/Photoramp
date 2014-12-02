@@ -9,7 +9,7 @@ Photoramp.controller("MasterController", function ($location, $rootScope, Instag
     $rootScope.images = null;
     $rootScope.maxId = null;
     //$rootScope.nextUrl = null;
-    $rootScope.count = 4;
+    $rootScope.count = 3;
     $rootScope.isBusy = false;
     $rootScope.loading = true;
 
