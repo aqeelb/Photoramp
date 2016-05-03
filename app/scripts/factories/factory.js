@@ -8,7 +8,7 @@ angular.module("Photoramp.Services", []).factory("InstagramService", function ($
     return {
         initialize: function () {
             //initialize OAuth.io with public key of the application
-            OAuth.initialize("jpHrhkTMUYBVtVnDEkm9hFn9xlk", {
+            OAuth.initialize("Qtlnf42RV0BDfs23TxnjSEyu9Bg", {
                 cache: true
             });
             authorizationResult = OAuth.create("instagram");
