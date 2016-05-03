@@ -1,6 +1,6 @@
 Photoramp
 ===============
-An Angular JS single page application that harnesses the Instagram API.
+An Angular JS single page application that harnesses the Instagram API. I have used (OAuth.io) for simplification.
 
 How to build the app
 ===============
